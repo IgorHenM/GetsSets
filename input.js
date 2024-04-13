@@ -36,9 +36,9 @@ function create(){
         }
     for(let l = 0; l < atrvet.length; l++){
         if(l == atrvet.length - 1){
-            param2 += `${tipovet[l].toLowerCase()} ${atrvet[l]}`
+            param2 += `${tipovet[l]} ${atrvet[l]}`
         }else{
-            param2 += `${tipovet[l].toLowerCase()} ${atrvet[l]},`
+            param2 += `${tipovet[l]} ${atrvet[l]},`
         }
     }
 
@@ -52,7 +52,7 @@ function create(){
     }else{
     for(let i = 0; i < atrvet.length; i++){
         content +=
-    `private ${tipovet[i].toLowerCase()} ${atrvet[i]};<br>`;
+    `private ${tipovet[i]} ${atrvet[i]};<br>`;
     }
     content += 
     `public ${classname}(){<br>
@@ -72,19 +72,19 @@ function create(){
     for(let j = 0; j < atrvet.length; j++){
         if(j == atrvet.length - 1){
             content += 
-    `public void set${atrvet[j]}(${tipovet[j].toLowerCase()} ${atrvet[j]}){<br>
+    `public void set${atrvet[j]}(${tipovet[j]} ${atrvet[j]}){<br>
         this.${atrvet[j]} = ${atrvet[j]};<br>
     }<br>
-    public ${tipovet[j].toLowerCase()} get${atrvet[j]}(){<br>
+    public ${tipovet[j]} get${atrvet[j]}(){<br>
         return ${atrvet[j]};<br>
     }<br>
 }`
         }else{
             content += 
-    `public void set${atrvet[j]}(${tipovet[j].toLowerCase()} ${atrvet[j]}){<br>
+    `public void set${atrvet[j]}(${tipovet[j]} ${atrvet[j]}){<br>
         this.${atrvet[j]} = ${atrvet[j]};<br>
     }<br>
-    public ${tipovet[j].toLowerCase()} get${atrvet[j]}(){<br>
+    public ${tipovet[j]} get${atrvet[j]}(){<br>
         return ${atrvet[j]};<br>
     }<br>`
         }
