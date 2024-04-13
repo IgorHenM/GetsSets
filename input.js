@@ -14,7 +14,7 @@ function create(){
         var atrvet = atrs.split(" ");
         var tipovet = tipo.split(" ");
         for(let m = 0; m < atrvet.length; m++){
-            if(tipovet[m] == "byte"|| tipovet[m] == "short" || tipovet[m] == "int" || tipovet[m] == "long" || tipovet[i] == "float" || tipovet[i] == "double"){
+            if(tipovet[m] == "byte"|| tipovet[m] == "short" || tipovet[m] == "int" || tipovet[m] == "long" || tipovet[m] == "float" || tipovet[m] == "double"){
                 if(m == atrvet.length -1){
                     param1 += "0";
                 }else{
