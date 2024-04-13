@@ -26,7 +26,7 @@ function create(){
                 }else{
                     param1 += "null,";
                 }
-            }else if(tipovet[i] == "boolean"){
+            }else if(tipovet[m] == "boolean"){
                 if(m == atrvet.length -1){
                     param1 += "true";
                 }else{
