@@ -20,7 +20,7 @@ function create(){
                 }else{
                     param1 += "0,";
                 }
-            }else if(tipovet[i] == "String" || tipovet[i] == "char"){
+            }else if(tipovet[m] == "String" || tipovet[m] == "char"){
                 if(m == atrvet.length -1){
                     param1 += "null";
                 }else{
