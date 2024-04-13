@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Imagens/POO.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <title>GetSet</title>
+</head>
+<body>
+    <section class="secAdd">
+        <div id="msg" style="display: block;">
+            <p class="text">texto copiado para a área de transferência!</p>
+        </div>
+        <div class="contents">
+            <p class="desc">Nome da Classe:</p>
+            <input type="text" class="input" id="classname">
+            <p class="desc">Nome do ou dos<br> Atributos (separe com espaço):</p>
+            <input type="text" class="input" id="varname">
+            <p class="desc">Tipo ou tipos de<br> retorno (separe com espaço):</p>
+            <input type="text" class="input" id="type">
+            <br>
+            <button id="btn" onclick="create()">Criar</button>
+            <br>
+        </div>
+        <div id="resultado">
+            
+        </div>
+    </section>
+    <script src="input.js"></script>
+</body>
+</html>
