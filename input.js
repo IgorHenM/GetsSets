@@ -26,6 +26,12 @@ function create(){
                 }else{
                     param1 += "null,";
                 }
+            }else if(tipovet[i] == "boolean"){
+                if(m == atrvet.length -1){
+                    param1 += "true";
+                }else{
+                    param1 += "true,";
+                }
             }
         }
     for(let l = 0; l < atrvet.length; l++){
