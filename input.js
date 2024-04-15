@@ -1,17 +1,21 @@
+var classname = document.getElementById("classname");
+var atrs = document.getElementById("varname");
+var type = document.getElementById("type");
+
 function create(){
-    let classname = document.getElementById("classname").value;
-    let atrs = document.getElementById("varname").value;
-    let tipo = document.getElementById("type").value;
+    let classes = classname.value;
+    let atributos = atrs.value;
+    let tipo = type.value;
     let res = document.getElementById("resultado");
     var msg = document.getElementById("msg");
 
-    if(classname == "" || atrs == "" || tipo == ""){
+    if(classes == "" || atributos == "" || tipo == ""){
         alert("Adicione todos os valores corretamente.");
     }else{
         var param1 = "";
         var param2 = "";
     
-        var atrvet = atrs.split(" ");
+        var atrvet = atributos.split(" ");
         var tipovet = tipo.split(" ");
         for(let m = 0; m < atrvet.length; m++){
             if(tipovet[m] == "byte"|| tipovet[m] == "short" || tipovet[m] == "int" || tipovet[m] == "long" || tipovet[m] == "float" || tipovet[m] == "double"){
@@ -43,7 +47,7 @@ function create(){
     }
 
     let content = 
-`public class ${classname}{<br>`
+`public class ${classes}{<br>`
 
     if(tipovet.length < atrvet.length){
         alert("Digite o número correto de atributos!");
@@ -55,10 +59,10 @@ function create(){
     `private ${tipovet[i]} ${atrvet[i]};<br>`;
     }
     content += 
-    `public ${classname}(){<br>
+    `public ${classes}(){<br>
         this(${param1});<br>
     }<br>
-    public ${classname}(${param2}){<br>`;
+    public ${classes}(${param2}){<br>`;
     for(let k = 0; k < atrvet.length; k++){
         if(k == atrvet.length - 1){
             content += 
@@ -108,3 +112,8 @@ function create(){
     }
     }
 }
+document.getElementById("reset").addEventListener('click',function(){
+    classname.value = "";
+    atrs.value = "";
+    type.value = "";
+});
